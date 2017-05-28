@@ -1,0 +1,33 @@
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+\newcommand{\printTitlePage}{
+	\thispagestyle{empty}		% Remove page numbering on this page
+	\printtitle					% Print the title data as defined above
+	\vfill						% Variable fill
+	\printauthor				% Print the author data as defined above
+	\newpage
+}
+
+\makeatletter								% Title
+\def\printtitle{%						
+	{\centering \@title\par}}
+\makeatother									
+
+\makeatletter								% Author
+\def\printauthor{%					
+	{\flushright \large \@author}}				
+\makeatother							
+
+\title{	\normalsize \textsc{\SubTitleVar} 	% Subtitle
+	\\[2.0cm]								% 2cm spacing
+	\HRule{0.5pt} \\						% Top line
+	\LARGE \textbf{\uppercase{\TitleVar}}	% Title
+	\HRule{2pt} \\ [0.5cm]					% Lower line + 0.5cm spacing
+	\normalsize \DateVar					% Todays date
+}
+
+\author{
+	\AuthorVar\\	
+	\AuthorTitleVar\\	
+	\url{\AuthorURLVar}\\
+	\href{mailto:\AuthorEmailVar}{\AuthorEmailVar}\\
+}
