@@ -1,0 +1,27 @@
+\pagenumbering{roman}
+
+\chapter*{Abstract}\label{sec:abstract}
+\input{chapters/frontMatter/abstract}
+\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+
+\chapter*{Acknowledgements}\label{sec:acks}
+\input{chapters/frontMatter/acknowledgements}
+\addcontentsline{toc}{chapter}{\numberline{}Acknowledgements}
+
+% Table of Contents
+\tableofcontents
+\listoffigures \label{list:listOfFigures}
+\addcontentsline{toc}{chapter}{\numberline{}List of figures}
+\listoftables \label{list:listOfTables}
+\addcontentsline{toc}{chapter}{\numberline{}List of tables}
+
+
+\chapter{Introduction}\label{sec:introduction}
+\input{chapters/frontMatter/introduction}
+\setcounter{page}{1}
+	\fancypagestyle{plain}{
+	\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}
+}
+\cfoot{}
+\pagenumbering{arabic}
+\pagestyle{plain}

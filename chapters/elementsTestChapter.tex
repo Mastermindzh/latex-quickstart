@@ -1,0 +1,140 @@
+% generate random text to fill the page :)
+\lipsum[1]
+
+\section{Images}
+Behold this beautiful floating figure:
+
+\begin{figure}[H]
+	% always put label neat the top (after caption!) or your reference will not work as expected.
+	\caption[Programming is magic]{Programming is magic} 
+	\label{fig:programmingMagic} 
+	\centering
+	\includegraphics[height=300px]{images/programming.png}
+	% caption[Optional caption][Local caption] References ONLY go in the local caption!
+
+\end{figure}
+
+\subsection{Solid evidence}
+Figure \ref{fig:programmingMagic} proves that programming is magic.
+
+\subsection{Multiple images}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/programmingLanguages/java.jpg}
+		\caption{Java}
+		\label{Java}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/programmingLanguages/ruby.jpg}
+		\caption{Ruby}
+		\label{fig:ruby}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.3\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{images/programmingLanguages/python.png}
+		\caption{Python}
+		\label{fig:python}
+	\end{subfigure}
+	\caption{Three programming languages}
+	\label{fig:three graphs}
+\end{figure}
+
+
+\section{Tables}
+Down below you'll find a couple of tables.
+\begin{table}[H]
+	\label{tab:basicTable}
+	\centering
+	\caption[A basic table]{A basic table}
+	\begin{tabular}{l c r} %alignments
+		Language & Compiled & Difficulty \\ \hline	
+		Javascript & \ & easy \\
+		Ruby / Python & \ & normal \\
+		Java & X & hard \\
+		Scala & X & nightmare \\
+	\end{tabular}
+\end{table}
+
+
+\subsection{A series of tables}
+
+
+\begin{table}[H]
+	\label{tab:knotsAndCrosses}
+	\centering
+	\caption[Three Knots and Crosses games]{Three Knots and Crosses games}
+	\begin{tabular}{|c | c | c|} %alignments
+		\hline
+		O & X & O \\\hline
+		X & O & X \\\hline
+		X & O & X \\\hline 
+	\end{tabular}
+	\begin{tabular}{|c | c | c|} %alignments
+		\hline
+		O & X & - \\\hline 	
+		X & O & - \\\hline
+		- & - & O \\\hline 
+	\end{tabular}
+	\begin{tabular}{|c | c | c|} %alignments
+		\hline
+		X & O & X \\\hline 	
+		O & X & O \\\hline
+		O & X & O \\\hline 
+	\end{tabular}
+\end{table}
+
+
+\subsection{Complicated tables}
+\begin{table}[H]
+	\label{tab:complicatedTable}
+	\centering
+	\def\arraystretch{1.5} % padding
+	\caption[A complicated table]{A complicated table generated with: \url{http://www.tablesgenerator.com}}
+\begin{tabular}{|l|c|c|c|c|}
+	\hline
+	\textbf{Language} & \multicolumn{1}{l|}{\textbf{typing}} & \multicolumn{1}{l|}{\textbf{Object oriented}} & \multicolumn{1}{l|}{\textbf{GC}} & \multicolumn{1}{l|}{\textbf{Difficulty}} \\ \hline
+	Javascript & dynamic &  & X & easy \\ \hline
+	Ruby/Python & dynamic & X & X & normal \\ \hline
+	\multicolumn{5}{|c|}{\textit{\textbf{Compiled languages}}} \\ \hline
+	Java & static & X & X & hard \\ \hline
+	Scala & dynamic & X & X & nightmare \\ \hline
+\end{tabular}
+\end{table}
+\begin{table}[H]
+	\label{tab:unitConversion}
+	\centering
+	\caption[Unit conversion table]{Unit conversion table}
+	\begin{tabular}{|r|l|}
+		\hline
+		7C8 & hexadecimal \\
+		3710 & octal \\ \cline{2-2}
+		11111001000 & binary \\
+		\hline \hline
+		1992 & decimal \\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\label{tab:unitConversion}
+	\centering
+	\caption[Spanning in both directions simultaneously]{Spanning in both directions simultaneously}
+	\begin{tabular}{cc|c|c|c|c|l}
+		\cline{3-6}
+		& & \multicolumn{4}{ c| }{Primes} \\ \cline{3-6}
+		& & 2 & 3 & 5 & 7 \\ \cline{1-6}
+		\multicolumn{1}{ |c  }{\multirow{2}{*}{Powers} } &
+		\multicolumn{1}{ |c| }{504} & 3 & 2 & 0 & 1 &     \\ \cline{2-6}
+		\multicolumn{1}{ |c  }{}                        &
+		\multicolumn{1}{ |c| }{540} & 2 & 3 & 1 & 0 &     \\ \cline{1-6}
+		\multicolumn{1}{ |c  }{\multirow{2}{*}{Powers} } &
+		\multicolumn{1}{ |c| }{gcd} & 2 & 2 & 0 & 0 & min \\ \cline{2-6}
+		\multicolumn{1}{ |c  }{}                        &
+		\multicolumn{1}{ |c| }{lcm} & 3 & 3 & 1 & 1 & max \\ \cline{1-6}
+	\end{tabular}
+\end{table}

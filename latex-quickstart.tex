@@ -13,20 +13,31 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lipsum}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{subcaption}
 
-
-\usepackage{graphicx}
-\graphicspath{ images/}
-
+% Title packages
 \usepackage{titlesec}
 \titleformat{\chapter}{\normalfont\huge\bfseries}{\thechapter. }{0pt}{\Huge}
 \titlespacing{\chapter} {0pt}{0pt}{10pt}
 
-\usepackage{lastpage}
-\usepackage{fancyhdr}
-\fancypagestyle{plain}{
-\fancyfoot[R]{Page \thepage\ of \pageref{LastPage}}}
-\cfoot{}
+% Table packages
+\usepackage[none]{hyphenat}
+\usepackage{tabularx}
+\usepackage{multirow}
+\captionsetup[table]{skip=5pt}
+
+% Graphics packages
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{images/}
+
+
+
+
+
 
 
 
@@ -54,31 +65,23 @@
 	\begin{titlepage}
 		\printTitlePage		
 	\end{titlepage}
-
 	% --------------------------
-	% Front matter
+	% Front matter (includes introduction)
 	% --------------------------
-	\pagenumbering{roman}
-	\chapter*{Abstract}\label{sec:abstract}
+	\include{includes/frontMatter}
 
-	% Table of Contents
-	\tableofcontents
-	\thispagestyle{empty}
-	
 	% --------------------------
 	% Main matter
 	% --------------------------
-	\pagenumbering{arabic}
-	\chapter{Introduction}\label{sec:introduction}
-	\input{chapters/introduction}
-	\setcounter{page}{1}
-		
-	\chapter{First Chapter}\label{sec:first}
-	\input{chapters/testChapter}
+	\chapter{Text test chapter}\label{sec:first}
+	\input{chapters/textTestChapter}
 
 	
-	\chapter{Second Chapter}\label{sec:second}
-	\input{chapters/testChapter}
+	\chapter{Elements test chapter}\label{sec:second}
+	\input{chapters/elementsTestChapter}
 	
+	% --------------------------
+	% Back(end) matter
+	% --------------------------
 	
 \end{document}
